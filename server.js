@@ -17,7 +17,11 @@ app.use(cors())
 app.use(morgan('dev'))
 
 
-
+app.get('/', (res,req,next) =>{
+  res.status(200).send({
+    mensaggem : 'ok'
+  })
+})
 app.get('/download', ( req , res ) => { 
 
     var ref = req.query.URL;
@@ -124,5 +128,5 @@ const tracker = {
     });
 
 app.listen(port, () => {
-    console.log(`http://localhost:${port}/`);
+    console.log(`http://nettube-gray.vercel.app:${port}/`);
 });
