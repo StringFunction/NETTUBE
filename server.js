@@ -120,13 +120,7 @@ const tracker = {
   ffmpegProcess.stdio[6].pipe(res)
 
 
-
-    });
-
-app.listen(port, () => {
-    // console.log(`http://localhost:${port}/`);
-    console.log(`${port}`);
-});
-
-
+  
+  
+  });
 module.exports = app;
