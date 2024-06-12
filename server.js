@@ -17,9 +17,10 @@ app.use(cors())
 app.use(morgan('dev'))
 
 
-app.get('/', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, + './index.html'));
-})
+
+app.get("/",(req, res) =>{
+  res.sendFile(__dirname + "index.html")
+} )
 app.get('/download', ( req , res ) => { 
 
     var ref = req.query.URL;
