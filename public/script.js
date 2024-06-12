@@ -7,11 +7,11 @@ convertBtn.addEventListener('click', () => {
     sendURL(URLinput.value); 
 });
 async function  sendURL( URL ) { 
-    fetch(`https://nettube-gray.vercel.app/download?URL=${URL}`, { 
+    fetch(`http://localhost:3000/download?URL=${URL}`, { 
         método:'GET' 
     }).then( res => res.json()) 
     .then( json => console.log(json)); 
-    window.location.href = `https://nettube-gray.vercel.app`; 
+    window.location.href = `http://localhost:3000/download?URL=${URL}`; 
 
 
 }
