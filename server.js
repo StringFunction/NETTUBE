@@ -18,7 +18,9 @@ app.use(morgan('dev'))
 
 
 app.get('/', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, 'index.html'));
+  res.status(200).send({
+    mensagem : 'conexao ok'
+  })
 })
 app.get('/download', ( req , res ) => { 
 
