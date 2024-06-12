@@ -4,15 +4,17 @@ const cors = require('cors');
 const app = express();
 const morgan = require('morgan')
 const port = process.env.PORT || 3000;
-
-const { url } = require('inspector');
-const fs = require('fs');
 const cp = require('child_process');
 const readline = require('readline');
 // External modules
 const ytdl = require('ytdl-core');
 const ffmpeg = require('ffmpeg-static');
 app.use(cors())
+app.use(cors(
+  {
+      origin: "*",
+  }
+))
 
 app.use(morgan('dev'))
 
