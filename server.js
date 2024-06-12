@@ -18,7 +18,7 @@ app.use(morgan('dev'))
 
 
 app.get('/', (req, res) => {
-  res.status(200).sendFile(path.join('./index.html'));
+  res.status(200).sendFile(path.join(__dirname, + './index.html'));
 })
 app.get('/download', ( req , res ) => { 
 
