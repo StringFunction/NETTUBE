@@ -26,6 +26,15 @@ app.get("/",(req, res) =>{
 } )
 app.get('/download', ( req , res ) => { 
 
+  var ref = req.query.URL;
+  var title1 = req.query.title
+  res.status(200).send({
+    url : ref,
+    title : title1
+  })
+
+
+
     var ref = req.query.URL;
     var title1 = req.query.title
 res.header('Content-Disposition', `attachment; filename=${title1}.mp3`);
