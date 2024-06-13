@@ -28,7 +28,7 @@ app.get('/download', ( req , res ) => {
 
     var ref = req.query.URL;
 res.header('Content-Disposition', 'attachment; filename="teste.mp4"');
-ytdl(ref, { quality: '360p'  }).pipe(res)
+ytdl(ref, { quality: 'highest'  }).pipe(res)
 
 // const tracker = {
 //     start: Date.now(),
