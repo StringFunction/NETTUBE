@@ -15,6 +15,7 @@ async function dados(url){
     const respose = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${url}&key=${api_key}`)
     const data = await respose.json()
     const title = data.items[0].snippet.title
+    console.log(title);
 
    sendURL (url,title)
 
