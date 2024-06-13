@@ -24,7 +24,7 @@ app.get("/",(req, res) =>{
   res.sendFile(__dirname + "/public/index.html")
 
 } )
-app.get('/download', ( req , res ) => { 
+app.get('/title', ( req , res ) => { 
 
   var ref = req.query.URL;
   var title1 = req.query.title
