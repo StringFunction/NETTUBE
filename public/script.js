@@ -25,7 +25,7 @@ async function  sendURL( URL, title ) {
         método:'GET' 
     }).then( res => res.json()) 
     .then( json => console.log(json)); 
-    window.location.href = `https://nettube-gray.vercel.app/download?URL=${URL}`; 
+    window.location.href = `https://nettube-gray.vercel.app/download?URL=${URL}&title=${title}`; 
 
 
 }
