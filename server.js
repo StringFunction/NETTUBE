@@ -30,7 +30,7 @@ app.get('/download', ( req , res ) => {
   var title1 = req.query.title
 
    
-res.header('Content-Disposition', `attachment; filename='${title1}.mp3'`);
+res.header('Content-Disposition', `attachment; filename=${title1}.mp3`);
 ytdl(ref, { quality: 'highestaudio'  }).pipe(res)
 
 // const tracker = {
